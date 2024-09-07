@@ -8,7 +8,7 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Automóviles</title>
-    <link rel="stylesheet" href="../css/styles.css"> <!-- Actualiza la ruta si es necesario -->
+    <link rel="stylesheet" href="../css/principal.css"> <!-- Actualiza la ruta si es necesario -->
 </head>
 <body>
     <main>
@@ -16,7 +16,7 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
         
         <!-- Formulario de búsqueda -->
         <form method="GET" action="principal_vehiculos.php">
-            <input type="text" name="buscar" placeholder="Buscar por ID o Placa" value="<?php echo htmlspecialchars($searchTerm); ?>">
+            <input type="text" class="barra" name="buscar" placeholder="Buscar por ID o Placa" value="<?php echo htmlspecialchars($searchTerm); ?>">
             <button type="submit">Buscar</button>
         </form>
 
@@ -42,10 +42,10 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
                         <td><?php echo htmlspecialchars($row['modelo']); ?></td>
                         <td><?php echo htmlspecialchars($row['anio']); ?></td>
                         <td><?php echo htmlspecialchars($row['color']); ?></td>
-                        <td>
+                        <td class="acciones">
                             <!-- Botones de acción -->
-                            <a href="../cruds/actualizar.php?id=<?php echo $row['id']; ?>" class="btn">Actualizar</a>
-                            <a href="../cruds/eliminar.php?id=<?php echo $row['id']; ?>" class="btn" onclick="return confirm('¿Estás seguro de que deseas eliminar este automóvil?')">Eliminar</a>
+                            <a href="../cruds/actualizar.php?id=<?php echo $row['id']; ?>" class="btn actualizar">Actualizar</a>
+                            <a href="../cruds/eliminar.php?id=<?php echo $row['id']; ?>" class="btn eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este automóvil?')">Eliminar</a>
                         </td>
                     </tr>
                     <?php endwhile; ?>
