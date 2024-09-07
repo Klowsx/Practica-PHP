@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>Bienvenido al Sistema de Gestión de Automóviles</h1>
-    <a href="registrar_automovil.php">Registrar un nuevo automóvil</a>
+    <a href="views/principal_vehiculos.php">Registrar un nuevo automóvil</a>
 </body>
 </html>

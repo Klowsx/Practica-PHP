@@ -1,7 +1,7 @@
 <?php
 // Incluir archivos de conexión y clase Automovil
-include 'includes/Database.php';
-include 'includes/Automovil.php';
+include '../includes/Database.php';
+include '../includes/Automovil.php';
 
 // Crear una instancia de la clase Database y obtener la conexión
 $database = new Database();
@@ -19,9 +19,15 @@ $automovil->placa = $_POST['placa'];
 
 // Registrar el automóvil
 if ($automovil->registrar()) {
-    echo "Automóvil registrado exitosamente.";
+    echo "<script>
+                alert('Automóvil registrado correctamente.');
+                window.location.href = '../views/principal_vehiculos.php';
+              </script>";
 } else {
-    echo "Error al registrar el automóvil.";
+    echo "<script>
+                alert('Error al registrar el automovil.');
+                window.location.href = '../views/principal_vehiculos.php';
+              </script>";
 }
 
 ?>

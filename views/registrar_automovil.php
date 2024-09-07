@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Automóviles</title>
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="../css/registro.css">
 </head>
 <body>
     <div class="contForm">
         <h2>Registrar Automóvil</h2>
-        <form action="procesar_registro.php" method="post">
+        <form action="../cruds/procesar_registro.php" method="post">
             <div class="form-group">
                 <label for="marca">Marca:</label>
                 <input type="text" id="marca" name="marca" required>

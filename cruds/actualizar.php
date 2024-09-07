@@ -1,6 +1,6 @@
 <?php
-include_once 'Database.php';
-include_once 'automovil.php';
+include_once '../includes/Database.php';
+include_once '../includes/automovil.php';
 
 $database = new Database();
 $db = $database->getConnection();
@@ -15,8 +15,13 @@ $automovil->color = $_POST['color'];
 $automovil->placa = $_POST['placa'];
 
 if ($automovil->actualizar()) {
-    echo "Automóvil actualizado con éxito.";
+    echo "<script>
+                alert('Automóvil actualizado correctamente.');
+                window.location.href = '../views/principal_vehiculos.php';
+              </script>";
 } else {
-    echo "Hubo un error al actualizar el automóvil.";
-}
+    echo "<script>
+                alert('Error al actualizar el automovil.');
+                window.location.href = '../views/principal_vehiculos.php';
+              </script>";}
 ?>
