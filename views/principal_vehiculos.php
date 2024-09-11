@@ -1,5 +1,5 @@
 <?php
-include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
+include '../cruds/busqueda.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Automóviles</title>
-    <link rel="stylesheet" href="../css/principal.css"> <!-- Actualiza la ruta si es necesario -->
+    <link rel="stylesheet" href="../css/principal.css">
 </head>
 <body>
     <main>
@@ -17,7 +17,7 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
         <!-- Formulario de búsqueda -->
         <form method="GET" action="principal_vehiculos.php">
             <input type="text" class="barra" name="buscar" placeholder="Buscar por ID o Placa" value="<?php echo htmlspecialchars($searchTerm); ?>">
-            <button type="submit">Buscar</button>
+            <button type="submit" class="btn">Buscar</button>
         </form>
 
         <table>
@@ -29,6 +29,8 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
                     <th>Modelo</th>
                     <th>Año</th>
                     <th>Color</th>
+                    <th>N° de motor</th>
+                    <th>N° de chasis</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -42,6 +44,8 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
                         <td><?php echo htmlspecialchars($row['modelo']); ?></td>
                         <td><?php echo htmlspecialchars($row['anio']); ?></td>
                         <td><?php echo htmlspecialchars($row['color']); ?></td>
+                        <td><?php echo htmlspecialchars($row['numero_motor']); ?></td>
+                        <td><?php echo htmlspecialchars($row['numero_chasis']); ?></td>
                         <td class="acciones">
                             <!-- Botones de acción -->
                             <a href="../cruds/actualizar.php?id=<?php echo $row['id']; ?>" class="btn actualizar">Actualizar</a>
@@ -56,7 +60,11 @@ include '../cruds/busqueda.php'; // Incluir la lógica de búsqueda
         </table>
     </main>
     
-    <!-- Enlace para registrar un nuevo automóvil -->
+
     <a href="../views/registrar_automovil.php" class="btn">Registrar Automóvil</a>
+
+    <footer>
+        <p>&copy; Javier Hernandez 8-1001-178 1LS131</p>
+    </footer>
 </body>
 </html>

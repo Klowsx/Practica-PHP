@@ -3,6 +3,8 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: monospace;
+  margin: 0;
+  height: 100vh;
 }
 
 main {
@@ -14,7 +16,7 @@ main {
 
 table {
   border-collapse: collapse;
-  width: 60%;
+  width: 100%;
   margin: 30px;
 }
 

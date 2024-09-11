@@ -30,8 +30,16 @@
                 <label for="placa">Placa:</label>
                 <input type="text" id="placa" name="placa" required>
             </div>
+            <div class="form-group">
+                <label for="numero_motor">N° de motor:</label>
+                <input type="text" id="numero_motor" name="numero_motor" required>
+            </div>
+            <div class="form-group">
+                <label for="numero_chasis">N° de chasis:</label>
+                <input type="text" id="numero_chasis" name="numero_chasis" required>
+            </div>
             <input type="submit" value="Registrar" class="btn">
-        </form>  
+        </form>
     </div>
 </body>
 </html>

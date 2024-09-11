@@ -1,28 +1,30 @@
 <?php
-// Incluir archivos de conexión y clase Automovil
+
 include '../includes/Database.php';
 include '../includes/Automovil.php';
 
-// Crear una instancia de la clase Database y obtener la conexión
 $database = new Database();
 $db = $database->getConnection();
 
-// Crear una instancia de la clase Automovil
 $automovil = new Automovil($db);
 
-// Obtener los datos del formulario
+// Obtener los datos
 $automovil->marca = $_POST['marca'];
 $automovil->modelo = $_POST['modelo'];
 $automovil->anio = $_POST['anio'];
 $automovil->color = $_POST['color'];
 $automovil->placa = $_POST['placa'];
+$automovil->color = $_POST['numero_motor'];
+$automovil->placa = $_POST['numero_chasis'];
 
-// Registrar el automóvil
+
 if ($automovil->registrar()) {
     echo "<script>
-                alert('Automóvil registrado correctamente.');
+            alert('Registro realizado exitosamente.');
+            setTimeout(function(){
                 window.location.href = '../views/principal_vehiculos.php';
-              </script>";
+            }, 5000);
+          </script>";
 } else {
     echo "<script>
                 alert('Error al registrar el automovil.');
