@@ -54,7 +54,7 @@ include '../cruds/busqueda.php';
                     </tr>
                     <?php endwhile; ?>
                 <?php else: ?>
-                    <tr><td colspan="7">No se encontraron automóviles.</td></tr>
+                    <tr><td colspan="9">No se encontraron automóviles.</td></tr>
                 <?php endif; ?>
             </tbody>
         </table>

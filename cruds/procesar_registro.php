@@ -14,8 +14,8 @@ $automovil->modelo = $_POST['modelo'];
 $automovil->anio = $_POST['anio'];
 $automovil->color = $_POST['color'];
 $automovil->placa = $_POST['placa'];
-$automovil->color = $_POST['numero_motor'];
-$automovil->placa = $_POST['numero_chasis'];
+$automovil->numero_motor = $_POST['numero_motor'];
+$automovil->numero_chasis = $_POST['numero_chasis'];
 
 
 if ($automovil->registrar()) {
