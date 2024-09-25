@@ -46,6 +46,7 @@ include '../cruds/busqueda.php';
                         <td><?php echo htmlspecialchars($row['color']); ?></td>
                         <td><?php echo htmlspecialchars($row['numero_motor']); ?></td>
                         <td><?php echo htmlspecialchars($row['numero_chasis']); ?></td>
+                        
                         <td class="acciones">
                             <!-- Botones de acción -->
                             <a href="../cruds/actualizar.php?id=<?php echo $row['id']; ?>" class="btn actualizar">Actualizar</a>
@@ -60,8 +61,11 @@ include '../cruds/busqueda.php';
         </table>
     </main>
     
-
+<div class="contBtn">
     <a href="../views/registrar_automovil.php" class="btn">Registrar Automóvil</a>
+      <a href="../views/registrar_usuario.php" class="btn">Registrar Usuario</a>
+</div>
+
 
     <footer>
         <p>&copy; Javier Hernandez 8-1001-178 1LS131</p>

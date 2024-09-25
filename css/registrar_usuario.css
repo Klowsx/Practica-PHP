@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contForm {
+  width: 500px;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.btn {
+  padding: 8px;
+  text-align: center;
+  border-radius: 12px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #52b255;
+  transform: scale(1.05);
+}
+
+.form-group {
+  display: flex;
+  width: 70%;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  width: 200px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cancelar {
+  background-color: rgb(224, 157, 0);
+  padding: 5px;
+}
+
+.cancelar:hover {
+  background-color: rgb(255, 195, 54);
+  transform: scale(1.05);
+}
+
+select,
+textarea {
+  width: 220px;
+}
+
+.btn-group {
+  justify-content: center;
+}
+
+.btn {
+  width: 90px;
+  height: 30px;
+  margin: 20px;
+}
