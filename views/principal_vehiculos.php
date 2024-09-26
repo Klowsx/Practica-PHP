@@ -31,6 +31,7 @@ include '../cruds/busqueda.php';
                     <th>Color</th>
                     <th>N° de motor</th>
                     <th>N° de chasis</th>
+                    <th>Propietario</th>
                     <th>Acciones</th>
                 </tr>
             </thead>

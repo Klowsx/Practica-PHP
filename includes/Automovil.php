@@ -10,8 +10,8 @@ class Automovil {
     public $anio;
     public $color;
     public $placa;
-public $numero_motor;
-public $numero_chasis;
+    public $numero_motor;
+    public $numero_chasis;
 
     // Constructor que recibe la conexión a la base de datos
     public function __construct($db) {
