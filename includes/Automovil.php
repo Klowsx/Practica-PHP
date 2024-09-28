@@ -12,6 +12,7 @@ class Automovil {
     public $placa;
     public $numero_motor;
     public $numero_chasis;
+    public $tipo_vehiculo;
 
     // Constructor que recibe la conexión a la base de datos
     public function __construct($db) {
@@ -74,5 +75,32 @@ class Automovil {
 
         return $stmt->execute();
     }
+
+    //FUNCION PARA OBTENER TODAS LAS MARCAS
+    public function obtenerMarcas() {
+        $query = "SELECT * FROM marcas";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //FUNCION PARA OBTENER LOS TIPOS DE VEHICULOS
+    public function obtenerTiposVehiculos() {
+        $query = "SELECT * FROM tipos_vehiculos";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //FUNCION PARA OBTENER LOS MODELOS
+    public function obtenerModelos($marca_id, $tipo_vehiculo_id) {
+        $query = "SELECT * FROM modelos WHERE marca_id = :marca_id AND tipo_vehiculo_id = :tipo_vehiculo_id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":marca_id", $marca_id);
+        $stmt->bindParam("tipo_vehiculo_id", $tipo_vehiculo_id);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
 ?>

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Propietario</title>
     <link rel="stylesheet" href="../css/registrar_usuario.css">
+    <link rel="stylesheet" href="../views/Js/registrar_automovil.js">
 </head>
 <body>
     <div class="contForm">
         <h2>Registrar Propietario</h2>
-        <form action="../cruds/procesar_registro_propietario.php" method="post">
+        <form action="../cruds/procesar_registro_usuario.php" method="post">
             <div class="form-group">
                 <label for="tipoPropietario">Tipo de Propietario:</label>
                 <select id="tipoPropietario" name="tipoPropietario" required>

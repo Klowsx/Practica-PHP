@@ -15,6 +15,7 @@ class Usuario{
     }
 
     public function registrarUsuario(){
+
         $query = "INSERT INTO " . $this->table_name . " (nombre, apellido, telefono, direccion, email, tipo_propietario) 
                   VALUES (:nombre, :apellido, :telefono, :direccion, :email, :tipo_propietario)";
         $stmt = $this->conn->prepare($query);
@@ -33,7 +34,12 @@ class Usuario{
         $stmt->bindParam(':email', $this->email);
         $stmt->bindParam(':tipo_propietario', $this->tipo_propietario);
         return $stmt->execute();
-    
+if ($stmt->execute()) {
+        return true;
+    } else {
+        print_r($stmt->errorInfo());
+        return false;
+    }
     }
 
 }
